@@ -1,0 +1,60 @@
+# 依赖
+node_modules/
+
+# 运行时产物
+debug/
+capture_logs/
+.playwright-mcp/
+
+# 打包产物
+dist/
+dist-electron/
+dist-electron2/
+*.blockmap
+builder-debug.yml
+
+# 前端构建产物(由 web/ 经 vite 生成)
+public/assets/
+
+# web 前端依赖
+web/node_modules/
+
+# 账号数据与浏览器 profile（含敏感 cookies）
+data/
+downloads/
+
+# API 访问令牌（含明文密钥）
+config/api-access.json
+
+# 图标构建中间产物与草稿(保留打包必需的 build/icon.ico)
+build/*
+!build/icon.ico
+logo_out/
+新建文件夹/
+项目1/
+
+# 临时/调试脚本
+scripts/_*.js
+scripts/capture.js
+
+# 临时脚本（防止调试脚本误入库）
+test_*.js
+_patch*.js
+*_manual.js
+capture_*.js
+track_*.js
+probe_*.js
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+.claude/
+
+# 服务器部署脚本（含密码）
+server-deploy/
+
+# 卡密缓存
+config/license.json

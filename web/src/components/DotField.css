@@ -1,0 +1,8 @@
+/* 交互式点阵背景容器:铺满父层,作为全屏背景使用 */
+.dot-field-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

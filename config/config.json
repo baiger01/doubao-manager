@@ -1,0 +1,222 @@
+{
+  "server": {
+    "port": 9527,
+    "host": "127.0.0.1",
+    "portFallbackCount": 20
+  },
+  "cdp": {
+    "debugPort": 9222,
+    "debugHost": "127.0.0.1",
+    "timeout": 300000,
+    "basePort": 19222
+  },
+  "platforms": {
+    "doubao": {
+      "label": "豆包",
+      "baseUrl": "https://www.doubao.com",
+      "loginUrl": "https://www.doubao.com",
+      "chatEndpoint": "/chat/completion",
+      "requestProfile": {
+        "preHandleEndpoint": "/alice/message/pre_handle_v2_without_conv",
+        "preHandleWithConv": false,
+        "sendInputSkill": false
+      },
+      "playInfoEndpoint": "/samantha/media/get_play_info",
+      "videoPlayInfo": {
+        "endpoint": "/samantha/media/get_play_info",
+        "bodyMode": "key",
+        "resultPath": "media_info",
+        "noWatermarkLr": "video_gen_no_watermark"
+      },
+      "chainSingleEndpoint": "/im/chain/single",
+      "botId": "7338286299411103781",
+      "conversationType": 3,
+      "cookieDomains": [
+        "doubao.com",
+        "byteimg.com",
+        "bytedance.com"
+      ],
+      "defaultParams": {
+        "aid": "497858",
+        "device_platform": "web",
+        "samantha_web": "1",
+        "use-olympus-account": "1",
+        "version_code": "20800",
+        "pkg_type": "release_version",
+        "pc_version": "3.22.5",
+        "language": "zh",
+        "region": "CN",
+        "sys_region": "CN",
+        "web_platform": "browser"
+      },
+      "videoModels": [
+        {
+          "value": "seedance_v2.0",
+          "label": "Seedance 2.0 Fast"
+        }
+      ],
+      "imageModels": [
+        {
+          "value": "Seedream 4.5",
+          "label": "Seedream 4.5"
+        },
+        {
+          "value": "Seedream 5.0 Lite",
+          "label": "Seedream 5.0 Lite"
+        },
+        {
+          "value": "Seedream 4.0",
+          "label": "Seedream 4.0"
+        }
+      ]
+    },
+    "dola": {
+      "label": "Dola",
+      "baseUrl": "https://www.dola.com",
+      "loginUrl": "https://www.dola.com/chat/",
+      "proxy": "http://127.0.0.1:7897",
+      "chatEndpoint": "/chat/completion",
+      "playInfoEndpoint": "/samantha/media/get_play_info",
+      "videoPlayInfo": {
+        "endpoint": "/samantha/video/get_play_info",
+        "bodyMode": "vid",
+        "resultPath": "play_infos"
+      },
+      "chainSingleEndpoint": "/im/chain/single",
+      "botId": "7339470689562525703",
+      "conversationType": 3,
+      "cookieDomains": [
+        "dola.com",
+        "ibyteimg.com",
+        "ciciai.com",
+        "bytedance.com"
+      ],
+      "defaultParams": {
+        "aid": "495671",
+        "device_platform": "web",
+        "samantha_web": "1",
+        "use-olympus-account": "1",
+        "version_code": "20800",
+        "pkg_type": "release_version",
+        "pc_version": "3.23.0",
+        "language": "zh",
+        "region": "SC",
+        "sys_region": "SC",
+        "web_platform": "browser"
+      },
+      "videoModels": [
+        {
+          "value": "seedance_v2.0",
+          "label": "Seedance 2.0 Fast"
+        }
+      ],
+      "imageModels": [
+        {
+          "value": "Seedream 4.5",
+          "label": "Seedream 4.5"
+        },
+        {
+          "value": "Seedream 5.0 Lite",
+          "label": "Seedream 5.0 Lite"
+        },
+        {
+          "value": "Seedream 4.0",
+          "label": "Seedream 4.0"
+        }
+      ]
+    },
+    "plus": {
+      "label": "plus",
+      "requiresAccount": false,
+      "supportsReferenceImages": true,
+      "supportsVideo": false,
+      "imageApi": {
+        "type": "openai-compatible",
+        "endpoint": "http://23.148.180.82:3002/v1/images/generations",
+        "apiKey": "",
+        "model": "gpt-image-2"
+      },
+      "videoModels": [],
+      "imageModels": [
+        {
+          "value": "gpt-image-2",
+          "label": "gpt-image2"
+        }
+      ]
+    },
+    "4k": {
+      "label": "4k",
+      "requiresAccount": false,
+      "supportsReferenceImages": true,
+      "supportsVideo": false,
+      "imageApi": {
+        "type": "openai-compatible",
+        "baseUrl": "https://5988.de5.net/v1",
+        "apiKey": "",
+        "model": "gpt-image-2",
+        "size": "3840x2160",
+        "quality": "high"
+      },
+      "videoModels": [],
+      "imageModels": [
+        {
+          "value": "gpt-image-2",
+          "label": "gpt-image-2"
+        }
+      ]
+    },
+    "orion": {
+      "label": "Orion",
+      "requiresAccount": false,
+      "supportsImage": false,
+      "supportsVideo": true,
+      "videoApi": {
+        "type": "orion-local",
+        "endpoint": "http://127.0.0.1:8787/generate",
+        "projectDir": "",
+        "images": [
+          "1.png",
+          "3.png",
+          "10.png",
+          "15.png",
+          "16.png",
+          "17.png"
+        ],
+        "outputDir": "",
+        "cookieFile": "",
+        "poll": true,
+        "pollSeconds": 900,
+        "pollInterval": 10,
+        "download": true
+      },
+      "imageModels": [],
+      "videoModels": [
+        {
+          "value": "orion-project1-15s",
+          "label": "Orion 项目1 15s"
+        }
+      ]
+    }
+  },
+  "polling": {
+    "intervalMs": 60000,
+    "autoSwitchOnExhausted": true
+  },
+  "license": {
+    "serverUrl": "http://23.148.180.82:3800",
+    "graceHours": 24,
+    "recheckIntervalMs": 3600000
+  },
+  "storage": {
+    "autoDownload": true,
+    "downloadDir": ""
+  },
+  "claude": {
+    "baseUrl": "https://api.anthropic.com",
+    "apiKey": "",
+    "model": "",
+    "models": [],
+    "maxTokens": 4096,
+    "systemPrompt": ""
+  }
+}

@@ -1,0 +1,50 @@
+// 参数下拉选项,逐字搬自原 index.html
+export const IMAGE_RATIOS = ['1:1', '2:3', '3:4', '4:3', '9:16', '16:9'];
+export const VIDEO_RATIOS = ['1:1', '3:4', '4:3', '9:16', '16:9', '21:9'];
+export const VIDEO_DURATIONS = [
+  { value: 5, label: '5秒' },
+  { value: 10, label: '10秒' },
+  { value: 15, label: '15秒' },
+];
+export const VIDEO_MOVEMENTS = [
+  { value: 'auto', label: '自动' },
+  { value: 'fixed', label: '固定镜头' },
+  { value: 'pan', label: '镜头环绕' },
+  { value: 'move', label: '镜头移动' },
+  { value: 'zoom', label: '镜头变焦' },
+];
+export const IMAGE_STYLES = [
+  { value: '', label: '自动' },
+  { value: 'skill_image_styles_portrait', label: '人像摄影' },
+  { value: 'skill_image_styles_film', label: '电影写真' },
+  { value: 'skill_image_styles_chinese', label: '中国风' },
+  { value: 'skill_image_styles_japanese_anime', label: '动漫' },
+  { value: 'skill_image_styles_3d', label: '3D渲染' },
+  { value: 'image_gen_style_cyberpunk', label: '赛博朋克' },
+  { value: 'skill_image_styles_cg', label: 'CG 动画' },
+  { value: 'skill_image_styles_ink_wash_painting', label: '水墨画' },
+  { value: 'skill_image_styles_oil_painting', label: '油画' },
+  { value: 'skill_image_styles_classic', label: '古典' },
+  { value: 'skill_image_styles_watercolor', label: '水彩画' },
+  { value: 'skill_image_styles_cartoon', label: '卡通' },
+  { value: 'skill_image_styles_flat_illustration', label: '平面插画' },
+  { value: 'skill_image_styles_landscape', label: '风景' },
+  { value: 'skill_image_styles_hongkong_anime', label: '港风动漫' },
+  { value: 'skill_image_styles_pixel_style', label: '像素风格' },
+  { value: 'skill_image_styles_fluorescence', label: '荧光绘画' },
+  { value: 'skill_image_styles_colored_pencil', label: '彩铅画' },
+  { value: 'skill_image_styles_figure', label: '手办' },
+  { value: 'skill_image_styles_children_illustration', label: '儿童绘画' },
+  { value: 'skill_image_styles_abstract', label: '抽象' },
+  { value: 'skill_image_styles_sharp_illustration', label: '锐笔插画' },
+  { value: 'skill_image_styles_acg', label: '二次元' },
+  { value: 'skill_image_styles_ink_print', label: '油墨印刷' },
+  { value: 'skill_image_styles_bnw_printing', label: '版画' },
+  { value: 'skill_image_styles_monet', label: '莫奈' },
+  { value: 'skill_image_styles_picasso', label: '毕加索' },
+  { value: 'skill_image_styles_rembrandt', label: '伦勃朗' },
+  { value: 'skill_image_styles_matisse', label: '马蒂斯' },
+  { value: 'skill_image_styles_baroque', label: '巴洛克' },
+  { value: 'skill_image_styles_oldschool', label: '复古动漫' },
+  { value: 'skill_image_styles_picturebook', label: '绘本' },
+];

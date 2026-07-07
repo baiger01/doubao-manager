@@ -1,0 +1,79 @@
+{
+  "name": "doubao-manager",
+  "version": "2.0.1",
+  "description": "豆包AI创作管理工作台",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js",
+    "electron": "electron .",
+    "build:web": "npm --prefix web run build",
+    "web:dev": "npm --prefix web run dev",
+    "dist": "powershell -ExecutionPolicy Bypass -File scripts/dist.ps1"
+  },
+  "private": true,
+  "build": {
+    "appId": "com.doubao.manager",
+    "productName": "lulu",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "package.json",
+      "electron-main.js",
+      "server.js",
+      "paths.js",
+      "routes/**/*",
+      "services/**/*",
+      "node_modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "public",
+        "to": "appdata/public"
+      },
+      {
+        "from": "config",
+        "to": "appdata/config"
+      },
+      {
+        "from": "mcp",
+        "to": "appdata/mcp"
+      }
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "lulu",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "artifactName": "lulu-setup.${ext}"
+    },
+    "asar": true
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^26.15.3"
+  }
+}
